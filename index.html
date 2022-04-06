@@ -56,22 +56,15 @@
         }
     }
 
-    function update(i){
-        var obj2=fillobj()
+    function update(i) {
+        var obj2 = fillobj()
         let crud = JSON.parse(localStorage.getItem("crud"));
-        crud[i]=obj2;
+        crud[i] = obj2;
         localStorage.setItem("crud", JSON.stringify(crud));
         document.getElementById("tbody").innerHTML = ''
         tablefill();
     }
 
-    // function update(i) {
-    //     // let crud = JSON.parse(localStorage.getItem("crud"));
-    //     arr[i].ffname=document.getElementById('fname').value
-    //     arr[i].llname=document.getElementById('lname').value
-    //     localStorage.setItem("crud", JSON.stringify(arr));
-    //     tablefill()
-    // }
 
     tablefill()
 
@@ -131,3 +124,26 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!--for data in table second methode-->
+<!--function showData() {-->
+<!--let loclstor = JSON.parse(localStorage.getItem("store"));-->
+<!--if (loclstor!= null) {-->
+<!--let html = "";-->
+<!--for (let k in loclstor) {-->
+<!--html =-->
+<!--html +-->
+<!--`-->
+<!--<tr>-->
+<!--    <td>${loclstor[k][0]}</td>-->
+<!--    <td>${loclstor[k][1]}</td>-->
+<!--    <td>${loclstor[k][2]}-->
+<!--    </td>-->
+<!--    <td><a href="javascript:void(0)" onclick="deletData(${k})">Delet</a></td>-->
+<!--    <td><a href="javascript:void(0)" onclick="editData(${k})">Edit</a></td>-->
+<!--</tr>`;-->
+<!--}-->
+<!--document.getElementById("jkl").innerHTML = html;-->
+<!--resetForm();-->
+<!--}-->
+<!--}-->
